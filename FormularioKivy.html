@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de repaso – Kivy M2L1–M2L2</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    margin: 40px;
+    background-color: #fafafa;
+    color: #222;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    color: #4B0082;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f0f0f8;
+  }
+  code, pre {
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+  }
+  pre {
+    padding: 10px;
+    overflow-x: auto;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<h1>🧩 Formulario de Repaso – Kivy M2L1 y M2L2</h1>
+<h2>🧠 Desarrollo de aplicaciones móviles con Kivy</h2>
+
+<hr>
+
+<h3>1️⃣ Módulos (secciones) de Kivy usados</h3>
+<table>
+<tr><th>Módulo importado</th><th>Descripción / propósito</th></tr>
+<tr><td><code>kivy.app</code></td><td>Clase base <code>App</code>, necesaria para iniciar la aplicación.</td></tr>
+<tr><td><code>kivy.uix.label</code></td><td>Muestra texto con <code>Label</code>.</td></tr>
+<tr><td><code>kivy.uix.button</code></td><td>Crea botones interactivos (<code>Button</code>).</td></tr>
+<tr><td><code>kivy.uix.textinput</code></td><td>Captura texto del usuario (<code>TextInput</code>).</td></tr>
+<tr><td><code>kivy.uix.boxlayout</code></td><td>Organiza widgets en filas o columnas.</td></tr>
+<tr><td><code>kivy.uix.screenmanager</code></td><td>Gestiona múltiples pantallas (<code>Screen</code>, <code>ScreenManager</code>).</td></tr>
+<tr><td><code>kivy.core.window</code></td><td>Permite definir tamaño de ventana (opcional).</td></tr>
+</table>
+
+<h3>2️⃣ Clases de Kivy aprendidas</h3>
+<table>
+<tr><th>Clase</th><th>Módulo</th><th>Uso</th></tr>
+<tr><td><code>App</code></td><td><code>kivy.app</code></td><td>Clase principal de la app, se hereda.</td></tr>
+<tr><td><code>Label</code></td><td><code>kivy.uix.label</code></td><td>Muestra texto estático o dinámico.</td></tr>
+<tr><td><code>Button</code></td><td><code>kivy.uix.button</code></td><td>Botón para ejecutar acciones o navegar.</td></tr>
+<tr><td><code>TextInput</code></td><td><code>kivy.uix.textinput</code></td><td>Entrada de texto o números.</td></tr>
+<tr><td><code>BoxLayout</code></td><td><code>kivy.uix.boxlayout</code></td><td>Layout flexible de orientación vertical u horizontal.</td></tr>
+<tr><td><code>Screen</code></td><td><code>kivy.uix.screenmanager</code></td><td>Representa una pantalla individual.</td></tr>
+<tr><td><code>ScreenManager</code></td><td><code>kivy.uix.screenmanager</code></td><td>Controla las transiciones entre pantallas.</td></tr>
+</table>
+
+<h3>3️⃣ Métodos y atributos principales</h3>
+<table>
+<tr><th>Clase</th><th>Método / Atributo</th><th>Descripción</th></tr>
+<tr><td><code>App</code></td><td><code>build()</code></td><td>Devuelve el widget raíz de la aplicación.</td></tr>
+<tr><td><code>App</code></td><td><code>run()</code></td><td>Inicia la aplicación.</td></tr>
+<tr><td><code>ScreenManager</code></td><td><code>add_widget()</code></td><td>Agrega una pantalla.</td></tr>
+<tr><td><code>ScreenManager</code></td><td><code>current</code></td><td>Cambia la pantalla activa.</td></tr>
+<tr><td><code>ScreenManager</code></td><td><code>transition.direction</code></td><td>Define la dirección de animación.</td></tr>
+<tr><td><code>Button</code></td><td><code>on_press()</code></td><td>Se ejecuta al presionar el botón.</td></tr>
+<tr><td><code>TextInput</code></td><td><code>.text</code></td><td>Contenido escrito por el usuario.</td></tr>
+<tr><td><code>TextInput</code></td><td><code>multiline=False</code></td><td>Campo de una sola línea.</td></tr>
+<tr><td><code>BoxLayout</code></td><td><code>orientation='vertical'</code></td><td>Organiza widgets en columna (vertical).</td></tr>
+<tr><td><code>Widget</code></td><td><code>add_widget()</code></td><td>Añade widgets hijos.</td></tr>
+<tr><td><code>Widget</code></td><td><code>set_disabled(True/False)</code></td><td>Activa o bloquea un widget (M2L3).</td></tr>
+</table>
+
+<h3>4️⃣ Funciones personalizadas</h3>
+<table>
+<tr><th>Función</th><th>Descripción</th><th>Uso</th></tr>
+<tr><td><code>ruffier_index(p1, p2, p3)</code></td><td>Calcula el índice de Ruffier.</td><td>Pantalla de resultados.</td></tr>
+<tr><td><code>ruffier_result(index)</code></td><td>Devuelve texto interpretativo del índice.</td><td>Pantalla de resultados.</td></tr>
+<tr><td><code>check_int(str_num)</code></td><td>Convierte texto a entero y valida.</td><td>Validación de entradas.</td></tr>
+</table>
+
+<h3>5️⃣ Widgets personalizados creados</h3>
+<table>
+<tr><th>Clase</th><th>Hereda de</th><th>Función</th></tr>
+<tr><td><code>ScrButton</code></td><td><code>Button</code></td><td>Cambia de pantalla al presionarlo.</td></tr>
+<tr><td><code>MainScr</code>, <code>Screen1</code>, <code>Screen2</code>...</td><td><code>Screen</code></td><td>Pantallas del ejercicio M2L1.</td></tr>
+<tr><td><code>InstructionScr</code>, <code>PulseScr1</code>, <code>PulseScr2</code>, <code>PulseScr3</code>, <code>ResultScr</code></td><td><code>Screen</code></td><td>Pantallas del proyecto Test de Ruffier (M2L2).</td></tr>
+</table>
+
+<h3>6️⃣ Conceptos teóricos</h3>
+<ul>
+  <li><strong>Prototipo:</strong> versión inicial con funcionalidad mínima.</li>
+  <li><strong>MVP:</strong> versión estable que puede usar un usuario real.</li>
+  <li><strong>ScreenManager:</strong> gestiona navegación entre pantallas.</li>
+  <li><strong>Variables globales / atributos del App:</strong> comparten datos entre pantallas.</li>
+  <li><strong>Validación:</strong> evita fallos por datos inválidos (ej. texto en lugar de número).</li>
+  <li><strong>Interfaz modular:</strong> separar código en clases y archivos.</li>
+</ul>
+
+<h3>7️⃣ Estructura general del archivo <code>main.py</code></h3>
+<pre><code class="language-python">
+from kivy.app import App
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
+from kivy.uix.button import Button
+from kivy.uix.textinput import TextInput
+
+# Pantallas
+class InstructionScr(Screen): ...
+class PulseScr1(Screen): ...
+class PulseScr2(Screen): ...
+class PulseScr3(Screen): ...
+class ResultScr(Screen): ...
+
+# Clase principal
+class RuffierApp(App):
+    def build(self):
+        sm = ScreenManager()
+        sm.add_widget(InstructionScr(name='instruction'))
+        sm.add_widget(PulseScr1(name='pulse1'))
+        sm.add_widget(PulseScr2(name='pulse2'))
+        sm.add_widget(PulseScr3(name='pulse3'))
+        sm.add_widget(ResultScr(name='result'))
+        return sm
+
+if __name__ == '__main__':
+    RuffierApp().run()
+</code></pre>
+
+<h3>8️⃣ Ejercicios prácticos realizados</h3>
+<table>
+<tr><th>Lección</th><th>Nombre de la práctica</th><th>Objetivo</th></tr>
+<tr><td>M2L1</td><td><em>Mi primera app en Kivy</em></td><td>Navegación y diseño básico.</td></tr>
+<tr><td>M2L2</td><td><em>Test de Ruffier</em></td><td>Captura y validación de datos, cálculo y resultado final.</td></tr>
+</table>
+
+<h3>9️⃣ Conceptos clave para recordar</h3>
+<ul>
+  <li>Qué es <code>App</code> y su método <code>build()</code>.</li>
+  <li>Cómo funciona <code>ScreenManager</code>.</li>
+  <li>Qué hace <code>on_press()</code> en un <code>Button</code>.</li>
+  <li>Diferencia entre <strong>prototipo</strong> y <strong>MVP</strong>.</li>
+  <li>Qué hace <code>add_widget()</code>.</li>
+  <li>Cómo obtener texto de un <code>TextInput</code>.</li>
+  <li>Cómo se calcula y muestra el índice de Ruffier.</li>
+</ul>
+
+<hr>
+<footer>
+  Elaborado por <strong>Diego Núñez</strong> para <strong>Algorithmics Metepec</strong>, noviembre 2025.
+</footer>
+
+</body>
+</html>
